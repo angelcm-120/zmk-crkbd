@@ -96,10 +96,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp PLUS   &kp LS(NUMBER_1)  &kp EQUAL  &kp UNDERSCORE  &kp RA(MINUS)           &kp CARET       &kp AMPS        &kp ASTRK     &kp LPAR         &kp RPAR   &kp BSPC
-&kp LEFT_SHIFT    &kp ASTRK  &kp LPAR          &kp PLUS   &kp SEMI        &kp LS(SINGLE_QUOTE)    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp HOME   &kp END
-&kp LEFT_CONTROL  &trans     &trans            &trans     &trans          &trans                  &kp UNDERSCORE  &kp PLUS        &kp LBRC      &kp RBRC         &kp GRAVE  &kp DELETE
-                                               &kp LGUI   &mo 3           &kp SPACE               &kp RET         &trans          &kp RALT
+&kp TAB           &kp PLUS   &kp LS(NUMBER_1)  &kp EQUAL  &kp UNDERSCORE      &kp RA(MINUS)      &kp CARET       &kp AMPS        &kp ASTRK     &kp LPAR         &kp RPAR   &kp BSPC
+&kp LEFT_SHIFT    &kp ASTRK  &kp LPAR          &kp PLUS   &kp APOSTROPHE      &kp AT             &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp HOME   &kp END
+&kp LEFT_CONTROL  &trans     &trans            &trans     &kp LS(APOSTROPHE)  &kp LS(AT_SIGN)    &kp UNDERSCORE  &kp PLUS        &kp LBRC      &kp RBRC         &kp GRAVE  &kp DELETE
+                                               &kp LGUI   &mo 3               &kp SPACE          &kp RET         &trans          &kp RALT
             >;
 
             label = "Symbol";
