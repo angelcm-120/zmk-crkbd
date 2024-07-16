@@ -15,13 +15,13 @@
 };
 
 &pinctrl {
-    spi3_default: spi3_default {
+    spi1_default: spi1_default {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
         };
     };
 
-    spi3_sleep: spi3_sleep {
+    spi1_sleep: spi1_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
             low-power-enable;
@@ -29,27 +29,35 @@
     };
 };
 
-&spi3 {
-  compatible = "nordic,nrf-spim";
-  status = "okay";
+&spi1 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
 
-  pinctrl-0 = <&spi3_default>;
-  pinctrl-1 = <&spi3_sleep>;
-  pinctrl-names = "default", "sleep";
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;
+    pinctrl-names = "default", "sleep";
 
-  led_strip: ws2812@0 {
-    compatible = "worldsemi,ws2812-spi";
+    led_strip: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+        label = "WS2812";
 
-    /* SPI */
-    reg = <0>; /* ignored, but necessary for SPI bindings */
-    spi-max-frequency = <4000000>;
+        /* SPI */
+        reg = <0>; /* ignored, but necessary for SPI bindings */
+        spi-max-frequency = <4000000>;
 
-    /* WS2812 */
-    chain-length = <27>; /* number of LEDs */
-    spi-one-frame = <0x70>;
-    spi-zero-frame = <0x40>;
-    color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-  };
+        /* WS2812 */
+        chain-length = <10>; /* arbitrary; change at will */
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+
+        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+    };
+};
+
+{
+    chosen {
+        zmk,underglow = &led_strip;
+    };
 };
 
 / {
@@ -98,10 +106,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp PLUS       &kp LS(NUMBER_1)                       &kp EQUAL           &kp UNDERSCORE     &kp RA(MINUS)    &kp LS(N3)      &kp LS(N4)    &kp LS(N5)         &kp LS(N6)       &kp RA(APOSTROPHE)  &kp BSPC
-&kp LEFT_SHIFT    &kp ASTRK      &kp LPAR                               &kp APOSTROPHE      &kp BACKSLASH      &kp LS(N0)       &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp HOME            &kp END
-&kp LEFT_CONTROL  &kp GRAVE      &kp RA(NUMBER_2,NUMBER_2,NUMBER_1)     &kp LS(APOSTROPHE)  &kp LS(BACKSLASH)  &kp LS(N7)       &kp LS(N2)      &kp MINUS     &kp RIGHT_BRACKET  &kp RBRC         &kp GRAVE           &kp DELETE
-                                                                        &kp LGUI            &mo 3              &kp SPACE        &kp RET         &trans        &kp RALT
+&kp TAB           &kp PLUS       &kp LS(NUMBER_1)  &kp EQUAL           &kp UNDERSCORE     &kp RA(MINUS)    &kp LS(N3)      &kp LS(N4)    &kp LS(N5)         &kp LS(N6)       &kp RA(APOSTROPHE)  &kp BSPC
+&kp LEFT_SHIFT    &kp ASTRK      &kp LPAR          &kp APOSTROPHE      &kp BACKSLASH      &kp LS(N0)       &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp HOME            &kp END
+&kp LEFT_CONTROL  &kp GRAVE      &kp LS(GRAVE)     &kp LS(APOSTROPHE)  &kp LS(BACKSLASH)  &kp LS(N7)       &kp LS(N2)      &kp MINUS     &kp RIGHT_BRACKET  &kp RBRC         &kp GRAVE           &kp DELETE
+                                                   &kp LGUI            &mo 3              &kp SPACE        &kp RET         &trans        &kp RALT
             >;
 
             label = "Symbol";
