@@ -39,10 +39,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC           &kp F1           &kp F2           &kp F3           &kp F4           &kp F5             &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp BSPC
-&kp LEFT_SHIFT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp END
-&kp LEFT_CONTROL  &none            &none            &kp CAPS         &kp RA(Q)        &kp PRINTSCREEN    &none            &kp F11          &kp F12          &none            &none            &kp ENTER
-                                                    &kp LEFT_ALT     &trans           &kp SPACE          &kp SPACE        &mo 3            &kp RALT
+&kp ESC           &kp F1  &kp F2  &kp F3        &kp F4     &kp F5             &kp F6     &kp F7   &kp F8    &kp F9  &kp F10  &kp BSPC
+&kp LEFT_SHIFT    &kp N1  &kp N2  &kp N3        &kp N4     &kp N5             &kp N6     &kp N7   &kp N8    &kp N9  &kp N0   &kp END
+&kp LEFT_CONTROL  &none   &none   &kp CAPS      &kp RA(Q)  &kp PRINTSCREEN    &none      &kp F11  &kp F12   &none   &none    &kp ENTER
+                                  &kp LEFT_ALT  &trans     &kp SPACE          &kp SPACE  &mo 3    &kp RALT
             >;
 
             label = "Nums";
@@ -56,10 +56,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp PLUS   &kp LS(NUMBER_1)  &kp EQUAL           &kp UNDERSCORE     &kp RA(MINUS)    &kp LS(N3)      &kp LS(N4)    &kp LS(N5)         &kp LS(N6)       &kp RA(APOSTROPHE)  &kp BSPC
-&kp LEFT_SHIFT    &kp ASTRK  &kp LPAR          &kp APOSTROPHE      &kp BACKSLASH      &kp LS(N0)       &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp HOME            &kp END
-&kp LEFT_CONTROL  &kp COLON  &kp LS(MINUS)     &kp LS(APOSTROPHE)  &kp LS(BACKSLASH)  &kp LS(N7)       &kp LS(N2)      &kp MINUS     &kp RIGHT_BRACKET  &kp RBRC         &kp GRAVE           &kp DELETE
-                                               &kp LGUI            &mo 3              &kp SPACE        &kp RET         &trans        &kp RALT
+&kp TAB           &kp PLUS       &kp LS(NUMBER_1)  &kp EQUAL           &kp UNDERSCORE     &kp RA(MINUS)    &kp LS(N3)      &kp LS(N4)    &kp LS(N5)         &kp LS(N6)       &kp RA(APOSTROPHE)  &kp BSPC
+&kp LEFT_SHIFT    &kp ASTRK      &kp LPAR          &kp APOSTROPHE      &kp BACKSLASH      &kp LS(N0)       &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp HOME            &kp END
+&kp LEFT_CONTROL  &kp RA(COMMA)  &kp RA(DOT)       &kp LS(APOSTROPHE)  &kp LS(BACKSLASH)  &kp LS(N7)       &kp LS(N2)      &kp MINUS     &kp RIGHT_BRACKET  &kp RBRC         &kp GRAVE           &kp DELETE
+                                                   &kp LGUI            &mo 3              &kp SPACE        &kp RET         &trans        &kp RALT
             >;
 
             label = "Symbol";
