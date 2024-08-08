@@ -30,7 +30,7 @@
         macrofull: macrofull {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp POUND &kp DLLR &kp PRCNT &kp PRCNT &kp CARET &kp AMPS &kp POUND &kp CARET &kp PRCNT &kp AMPS &kp POUND &kp DQT &kp SQT &kp DQT &kp STAR &kp PLUS &kp DQT &kp PIPE &kp STAR &kp PLUS &kp SQT &kp DQT &kp PIPE &kp EXCL &kp EXCL &kp QMARK &kp BSLH &kp LPAR &kp RPAR &kp RBKT &kp RBRC &kp LPAR &kp PIPE &kp LBKT &kp LBRC &kp FSLH &kp EXCL &kp QMARK &kp LBKT &kp LBRC &kp LPAR &kp LBKT &kp LBKT &kp FSLH &kp FSLH &kp LBKT &kp LBKT &kp LBRC &kp LBKT &kp LBKT &kp DQT &kp DQT &kp QMARK &kp STAR &kp STAR &kp QMARK &kp POUND &kp DLLR &kp AMPS &kp POUND &kp AMPS &kp PRCNT &kp BSLH &kp BSLH &kp LT &kp GT &kp EXCL &kp DQT &kp POUND &kp DLLR &kp PRCNT &kp AMPS &kp FSLH &kp LPAR &kp RPAR &kp QMARK &kp PLUS &kp RBKT &kp RBRC &kp DOT &kp MINUS &kp COMMA &kp STAR &kp LBKT &kp LBRC &kp SEMI &kp COLON &kp UNDER &kp SQT &kp QMARK &kp PIPE>;
+            bindings = <&kp EXCL &kp DQT &kp POUND &kp DLLR &kp PRCNT &kp AMPS &kp FSLH &kp LPAR &kp RPAR &kp EQUAL &kp SQT &kp PLUS &kp RBKT &kp RBRC &kp COMMA &kp DOT &kp MINUS &kp LT &kp PIPE &kp QMARK &kp STAR &kp LBKT &kp LBRC &kp SEMI &kp COLON &kp UNDER>;
             label = "macrofull";
         };
     };
