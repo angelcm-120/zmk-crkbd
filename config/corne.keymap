@@ -30,7 +30,7 @@
         macrofull: macrofull {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EXCL &kp DQT &kp POUND &kp DLLR &kp PRCNT &kp AMPS &kp FSLH &kp LPAR &kp RPAR &kp EQUAL &kp SQT &kp PLUS &kp RBKT &kp RBRC &kp COMMA &kp DOT &kp MINUS &kp LT &kp PIPE &kp QMARK &kp STAR &kp LBKT &kp LBRC &kp SEMI &kp COLON &kp UNDER>;
+            bindings = <&kp GT &kp BSLH &kp TILDE &kp CARET &kp GRAVE>;
             label = "macrofull";
         };
     };
